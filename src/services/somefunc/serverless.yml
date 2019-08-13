@@ -1,0 +1,25 @@
+service:
+  name: aws-nodejs-typescript
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: ../../../webpack.config.js
+    includeModules:
+      packagePath: ../../../package.json
+    packager: yarn
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: ap-southeast-1
+
+functions:
+  hello:
+    handler: handler.hello
+    # events:
+    #   - http:
+    #       method: get
+    #       path: hello
