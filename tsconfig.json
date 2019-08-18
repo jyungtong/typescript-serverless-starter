@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "target": "es2018",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["src/shared/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
